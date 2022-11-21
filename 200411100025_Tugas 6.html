@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Rumus prepocessing data Min Max &#8212; Data Mining</title>
+    <title>Stack And Bagging &#8212; Data Mining</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -157,7 +157,7 @@ const thebe_selector_output = ".output, .cell_output"
  </li>
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
-   Rumus prepocessing data Min Max
+   Stack And Bagging
   </a>
  </li>
 </ul>
@@ -366,12 +366,22 @@ title="Print to PDF"
     </div>
     <nav id="bd-toc-nav" aria-label="Page">
         <ul class="visible nav section-nav flex-column">
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#rumus-prepocessing-data-min-max">
    Rumus prepocessing data Min Max
   </a>
  </li>
- <li class="toc-h1 nav-item toc-entry">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#save-model-prepocessing">
+   Save model prepocessing
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#encoder-label">
+   Encoder Label
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#predict">
    Predict
   </a>
@@ -385,7 +395,7 @@ title="Print to PDF"
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Rumus prepocessing data Min Max</h1>
+                <h1>Stack And Bagging</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -395,12 +405,22 @@ title="Print to PDF"
                         </div>
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#rumus-prepocessing-data-min-max">
    Rumus prepocessing data Min Max
   </a>
  </li>
- <li class="toc-h1 nav-item toc-entry">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#save-model-prepocessing">
+   Save model prepocessing
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#encoder-label">
+   Encoder Label
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#predict">
    Predict
   </a>
@@ -415,7 +435,9 @@ title="Print to PDF"
                 
               <div>
                 
-  <div class="cell docutils container">
+  <section class="tex2jax_ignore mathjax_ignore" id="stack-and-bagging">
+<h1>Stack And Bagging<a class="headerlink" href="#stack-and-bagging" title="Permalink to this headline">#</a></h1>
+<div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">warnings</span>
 <span class="n">warnings</span><span class="o">.</span><span class="n">filterwarnings</span><span class="p">(</span><span class="s2">&quot;ignore&quot;</span><span class="p">)</span>
@@ -479,7 +501,7 @@ title="Print to PDF"
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-279a9ffb-d682-49ad-a9f3-21f70520ac8b">
+  <div id="df-d1a55a25-ffe3-4878-a087-e6bf1953fad7">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -779,7 +801,7 @@ title="Print to PDF"
 </table>
 <p>1151 rows × 20 columns</p>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-279a9ffb-d682-49ad-a9f3-21f70520ac8b')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-d1a55a25-ffe3-4878-a087-e6bf1953fad7')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
 
@@ -830,12 +852,12 @@ title="Print to PDF"
 
       <script>
         const buttonEl =
-          document.querySelector('#df-279a9ffb-d682-49ad-a9f3-21f70520ac8b button.colab-df-convert');
+          document.querySelector('#df-d1a55a25-ffe3-4878-a087-e6bf1953fad7 button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-279a9ffb-d682-49ad-a9f3-21f70520ac8b');
+          const element = document.querySelector('#df-d1a55a25-ffe3-4878-a087-e6bf1953fad7');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -865,7 +887,7 @@ title="Print to PDF"
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-8ec0aa69-aef4-420d-bdfe-f5771ba1b372">
+  <div id="df-f87f14e4-f1ba-4bc3-bb68-e7d161b11219">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -1153,7 +1175,7 @@ title="Print to PDF"
 </table>
 <p>1151 rows × 19 columns</p>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-8ec0aa69-aef4-420d-bdfe-f5771ba1b372')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-f87f14e4-f1ba-4bc3-bb68-e7d161b11219')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
 
@@ -1204,12 +1226,12 @@ title="Print to PDF"
 
       <script>
         const buttonEl =
-          document.querySelector('#df-8ec0aa69-aef4-420d-bdfe-f5771ba1b372 button.colab-df-convert');
+          document.querySelector('#df-f87f14e4-f1ba-4bc3-bb68-e7d161b11219 button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-8ec0aa69-aef4-420d-bdfe-f5771ba1b372');
+          const element = document.querySelector('#df-f87f14e4-f1ba-4bc3-bb68-e7d161b11219');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -1231,7 +1253,7 @@ title="Print to PDF"
 </div></div>
 </div>
 <section id="rumus-prepocessing-data-min-max">
-<h1>Rumus prepocessing data Min Max<a class="headerlink" href="#rumus-prepocessing-data-min-max" title="Permalink to this headline">#</a></h1>
+<h2>Rumus prepocessing data Min Max<a class="headerlink" href="#rumus-prepocessing-data-min-max" title="Permalink to this headline">#</a></h2>
 <div class="math notranslate nohighlight">
 \[
 \displaystyle x = \frac{x_{i} - x_{min}}{x_{max} - x_{min}}
@@ -1253,7 +1275,7 @@ title="Print to PDF"
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-72934d9d-13e4-43c6-b0d3-8a3fbcb89024">
+  <div id="df-15b0c632-9ade-4d3f-9969-091201b16b22">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -1518,7 +1540,7 @@ title="Print to PDF"
   </tbody>
 </table>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-72934d9d-13e4-43c6-b0d3-8a3fbcb89024')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-15b0c632-9ade-4d3f-9969-091201b16b22')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
 
@@ -1569,12 +1591,12 @@ title="Print to PDF"
 
       <script>
         const buttonEl =
-          document.querySelector('#df-72934d9d-13e4-43c6-b0d3-8a3fbcb89024 button.colab-df-convert');
+          document.querySelector('#df-15b0c632-9ade-4d3f-9969-091201b16b22 button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-72934d9d-13e4-43c6-b0d3-8a3fbcb89024');
+          const element = document.querySelector('#df-15b0c632-9ade-4d3f-9969-091201b16b22');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -1595,7 +1617,9 @@ title="Print to PDF"
   </div>
 </div></div>
 </div>
-<p>Save model prepocessing</p>
+</section>
+<section id="save-model-prepocessing">
+<h2>Save model prepocessing<a class="headerlink" href="#save-model-prepocessing" title="Permalink to this headline">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">joblib</span>
@@ -1617,7 +1641,9 @@ title="Print to PDF"
 </div>
 </div>
 </div>
-<p>Encoder Label</p>
+</section>
+<section id="encoder-label">
+<h2>Encoder Label<a class="headerlink" href="#encoder-label" title="Permalink to this headline">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn</span> <span class="kn">import</span> <span class="n">preprocessing</span>
@@ -1840,115 +1866,145 @@ acuracy n = 49 = 0.658008658008658
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>acuracy n = 51 = 0.6363636363636364
-acuracy n = 52 = 0.6363636363636364
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>acuracy n = 52 = 0.6363636363636364
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>acuracy n = 53 = 0.6320346320346321
-acuracy n = 54 = 0.6320346320346321
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>acuracy n = 54 = 0.6320346320346321
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>acuracy n = 55 = 0.6320346320346321
-acuracy n = 56 = 0.6363636363636364
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>acuracy n = 56 = 0.6363636363636364
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>acuracy n = 57 = 0.6320346320346321
-acuracy n = 58 = 0.6320346320346321
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>acuracy n = 58 = 0.6320346320346321
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>acuracy n = 59 = 0.6320346320346321
-acuracy n = 60 = 0.6320346320346321
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>acuracy n = 60 = 0.6320346320346321
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>acuracy n = 61 = 0.6320346320346321
-acuracy n = 62 = 0.6320346320346321
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>acuracy n = 62 = 0.6320346320346321
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>acuracy n = 63 = 0.6363636363636364
-acuracy n = 64 = 0.6320346320346321
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>acuracy n = 64 = 0.6320346320346321
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>acuracy n = 65 = 0.6320346320346321
-acuracy n = 66 = 0.6363636363636364
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>acuracy n = 66 = 0.6363636363636364
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>acuracy n = 67 = 0.6320346320346321
-acuracy n = 68 = 0.6320346320346321
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>acuracy n = 68 = 0.6320346320346321
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>acuracy n = 69 = 0.6320346320346321
-acuracy n = 70 = 0.6320346320346321
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>acuracy n = 70 = 0.6320346320346321
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>acuracy n = 71 = 0.6363636363636364
-acuracy n = 72 = 0.6363636363636364
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>acuracy n = 72 = 0.6363636363636364
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>acuracy n = 73 = 0.6363636363636364
-acuracy n = 74 = 0.6363636363636364
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>acuracy n = 74 = 0.6363636363636364
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>acuracy n = 75 = 0.6363636363636364
-acuracy n = 76 = 0.6363636363636364
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>acuracy n = 76 = 0.6363636363636364
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>acuracy n = 77 = 0.6363636363636364
-acuracy n = 78 = 0.6363636363636364
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>acuracy n = 78 = 0.6363636363636364
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>acuracy n = 79 = 0.6363636363636364
-acuracy n = 80 = 0.6363636363636364
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>acuracy n = 81 = 0.6363636363636364
-acuracy n = 82 = 0.6363636363636364
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>acuracy n = 80 = 0.6363636363636364
+acuracy n = 81 = 0.6363636363636364
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>acuracy n = 83 = 0.6363636363636364
-acuracy n = 84 = 0.6363636363636364
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>acuracy n = 82 = 0.6363636363636364
+acuracy n = 83 = 0.6363636363636364
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>acuracy n = 85 = 0.6363636363636364
-acuracy n = 86 = 0.6363636363636364
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>acuracy n = 84 = 0.6363636363636364
+acuracy n = 85 = 0.6363636363636364
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>acuracy n = 87 = 0.6363636363636364
-acuracy n = 88 = 0.6363636363636364
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>acuracy n = 86 = 0.6363636363636364
+acuracy n = 87 = 0.6363636363636364
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>acuracy n = 89 = 0.6363636363636364
-acuracy n = 90 = 0.6363636363636364
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>acuracy n = 88 = 0.6363636363636364
+acuracy n = 89 = 0.6363636363636364
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>acuracy n = 91 = 0.6363636363636364
-acuracy n = 92 = 0.6363636363636364
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>acuracy n = 90 = 0.6363636363636364
+acuracy n = 91 = 0.6363636363636364
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>acuracy n = 93 = 0.6406926406926406
-acuracy n = 94 = 0.6363636363636364
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>acuracy n = 92 = 0.6363636363636364
+acuracy n = 93 = 0.6406926406926406
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>acuracy n = 95 = 0.6363636363636364
-acuracy n = 96 = 0.6363636363636364
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>acuracy n = 94 = 0.6363636363636364
+acuracy n = 95 = 0.6363636363636364
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>acuracy n = 97 = 0.6363636363636364
-acuracy n = 98 = 0.6406926406926406
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>acuracy n = 96 = 0.6363636363636364
+acuracy n = 97 = 0.6363636363636364
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>acuracy n = 99 = 0.6406926406926406
-acuracy n = 100 = 0.6406926406926406
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>acuracy n = 98 = 0.6406926406926406
+acuracy n = 99 = 0.6406926406926406
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>acuracy n = 101 = 0.6406926406926406
-acuracy n = 102 = 0.6406926406926406
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>acuracy n = 100 = 0.6406926406926406
+acuracy n = 101 = 0.6406926406926406
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>acuracy n = 103 = 0.6406926406926406
-acuracy n = 104 = 0.645021645021645
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>acuracy n = 102 = 0.6406926406926406
+acuracy n = 103 = 0.6406926406926406
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>acuracy n = 105 = 0.645021645021645
-acuracy n = 106 = 0.645021645021645
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>acuracy n = 104 = 0.645021645021645
+acuracy n = 105 = 0.645021645021645
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>acuracy n = 106 = 0.645021645021645
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>acuracy n = 107 = 0.645021645021645
@@ -1956,10 +2012,10 @@ acuracy n = 108 = 0.645021645021645
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>acuracy n = 109 = 0.645021645021645
+acuracy n = 110 = 0.645021645021645
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>acuracy n = 110 = 0.645021645021645
-acuracy n = 111 = 0.645021645021645
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>acuracy n = 111 = 0.645021645021645
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>acuracy n = 112 = 0.6363636363636364
@@ -2157,6 +2213,12 @@ acuracy n = 111 = 0.645021645021645
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>acuracy n = 176 = 0.6493506493506493
 </pre></div>
 </div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>acuracy n = 177 = 0.6493506493506493
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>acuracy n = 178 = 0.6493506493506493
+</pre></div>
+</div>
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="ne">KeyboardInterrupt</span>Traceback (most recent call last)
 <span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">22</span><span class="o">-</span><span class="mi">9</span><span class="n">a95ece27548</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
 <span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">n</span><span class="p">:</span>
@@ -2166,102 +2228,39 @@ acuracy n = 111 = 0.645021645021645
 <span class="g g-Whitespace">      </span><span class="mi">7</span>   <span class="n">bag_test</span> <span class="o">=</span> <span class="n">accuracy_score</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">y_test_pred</span><span class="p">)</span>
 
 <span class="nn">/usr/local/lib/python3.7/dist-packages/sklearn/ensemble/_forest.py</span> in <span class="ni">fit</span><span class="nt">(self, X, y, sample_weight)</span>
-<span class="g g-Whitespace">    </span><span class="mi">465</span>                     <span class="n">n_samples_bootstrap</span><span class="o">=</span><span class="n">n_samples_bootstrap</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">466</span>                 <span class="p">)</span>
-<span class="nn">--&gt; 467                 for i, t</span> in <span class="ni">enumerate</span><span class="nt">(trees)</span>
-<span class="g g-Whitespace">    </span><span class="mi">468</span>             <span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">469</span> 
+<span class="g g-Whitespace">    </span><span class="mi">439</span>             <span class="n">trees</span> <span class="o">=</span> <span class="p">[</span>
+<span class="g g-Whitespace">    </span><span class="mi">440</span>                 <span class="bp">self</span><span class="o">.</span><span class="n">_make_estimator</span><span class="p">(</span><span class="n">append</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="n">random_state</span><span class="p">)</span>
+<span class="nn">--&gt; 441                 for i</span> in <span class="ni">range</span><span class="nt">(n_more_estimators)</span>
+<span class="g g-Whitespace">    </span><span class="mi">442</span>             <span class="p">]</span>
+<span class="g g-Whitespace">    </span><span class="mi">443</span> 
 
-<span class="nn">/usr/local/lib/python3.7/dist-packages/joblib/parallel.py</span> in <span class="ni">__call__</span><span class="nt">(self, iterable)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1086</span>                 <span class="bp">self</span><span class="o">.</span><span class="n">_iterating</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_original_iterator</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span>
-<span class="g g-Whitespace">   </span><span class="mi">1087</span> 
-<span class="ne">-&gt; </span><span class="mi">1088</span>             <span class="k">while</span> <span class="bp">self</span><span class="o">.</span><span class="n">dispatch_one_batch</span><span class="p">(</span><span class="n">iterator</span><span class="p">):</span>
-<span class="g g-Whitespace">   </span><span class="mi">1089</span>                 <span class="k">pass</span>
-<span class="g g-Whitespace">   </span><span class="mi">1090</span> 
+<span class="nn">/usr/local/lib/python3.7/dist-packages/sklearn/ensemble/_forest.py</span> in <span class="ni">&lt;listcomp&gt;</span><span class="nt">(.0)</span>
+<span class="g g-Whitespace">    </span><span class="mi">439</span>             <span class="n">trees</span> <span class="o">=</span> <span class="p">[</span>
+<span class="g g-Whitespace">    </span><span class="mi">440</span>                 <span class="bp">self</span><span class="o">.</span><span class="n">_make_estimator</span><span class="p">(</span><span class="n">append</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="n">random_state</span><span class="p">)</span>
+<span class="nn">--&gt; 441                 for i</span> in <span class="ni">range</span><span class="nt">(n_more_estimators)</span>
+<span class="g g-Whitespace">    </span><span class="mi">442</span>             <span class="p">]</span>
+<span class="g g-Whitespace">    </span><span class="mi">443</span> 
 
-<span class="nn">/usr/local/lib/python3.7/dist-packages/joblib/parallel.py</span> in <span class="ni">dispatch_one_batch</span><span class="nt">(self, iterator)</span>
-<span class="g g-Whitespace">    </span><span class="mi">899</span>                 <span class="k">return</span> <span class="kc">False</span>
-<span class="g g-Whitespace">    </span><span class="mi">900</span>             <span class="k">else</span><span class="p">:</span>
-<span class="ne">--&gt; </span><span class="mi">901</span>                 <span class="bp">self</span><span class="o">.</span><span class="n">_dispatch</span><span class="p">(</span><span class="n">tasks</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">902</span>                 <span class="k">return</span> <span class="kc">True</span>
-<span class="g g-Whitespace">    </span><span class="mi">903</span> 
+<span class="nn">/usr/local/lib/python3.7/dist-packages/sklearn/ensemble/_base.py</span> in <span class="ni">_make_estimator</span><span class="nt">(self, append, random_state)</span>
+<span class="g g-Whitespace">    </span><span class="mi">169</span> 
+<span class="g g-Whitespace">    </span><span class="mi">170</span>         <span class="k">if</span> <span class="n">random_state</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+<span class="ne">--&gt; </span><span class="mi">171</span>             <span class="n">_set_random_states</span><span class="p">(</span><span class="n">estimator</span><span class="p">,</span> <span class="n">random_state</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">172</span> 
+<span class="g g-Whitespace">    </span><span class="mi">173</span>         <span class="k">if</span> <span class="n">append</span><span class="p">:</span>
 
-<span class="nn">/usr/local/lib/python3.7/dist-packages/joblib/parallel.py</span> in <span class="ni">_dispatch</span><span class="nt">(self, batch)</span>
-<span class="g g-Whitespace">    </span><span class="mi">817</span>         <span class="k">with</span> <span class="bp">self</span><span class="o">.</span><span class="n">_lock</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">818</span>             <span class="n">job_idx</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_jobs</span><span class="p">)</span>
-<span class="ne">--&gt; </span><span class="mi">819</span>             <span class="n">job</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_backend</span><span class="o">.</span><span class="n">apply_async</span><span class="p">(</span><span class="n">batch</span><span class="p">,</span> <span class="n">callback</span><span class="o">=</span><span class="n">cb</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">820</span>             <span class="c1"># A job can complete so quickly than its callback is</span>
-<span class="g g-Whitespace">    </span><span class="mi">821</span>             <span class="c1"># called before we get here, causing self._jobs to</span>
+<span class="nn">/usr/local/lib/python3.7/dist-packages/sklearn/ensemble/_base.py</span> in <span class="ni">_set_random_states</span><span class="nt">(estimator, random_state)</span>
+<span class="g g-Whitespace">     </span><span class="mi">76</span>     <span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">estimator</span><span class="o">.</span><span class="n">get_params</span><span class="p">(</span><span class="n">deep</span><span class="o">=</span><span class="kc">True</span><span class="p">)):</span>
+<span class="g g-Whitespace">     </span><span class="mi">77</span>         <span class="k">if</span> <span class="n">key</span> <span class="o">==</span> <span class="s2">&quot;random_state&quot;</span> <span class="ow">or</span> <span class="n">key</span><span class="o">.</span><span class="n">endswith</span><span class="p">(</span><span class="s2">&quot;__random_state&quot;</span><span class="p">):</span>
+<span class="ne">---&gt; </span><span class="mi">78</span>             <span class="n">to_set</span><span class="p">[</span><span class="n">key</span><span class="p">]</span> <span class="o">=</span> <span class="n">random_state</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">iinfo</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">int32</span><span class="p">)</span><span class="o">.</span><span class="n">max</span><span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">79</span> 
+<span class="g g-Whitespace">     </span><span class="mi">80</span>     <span class="k">if</span> <span class="n">to_set</span><span class="p">:</span>
 
-<span class="nn">/usr/local/lib/python3.7/dist-packages/joblib/_parallel_backends.py</span> in <span class="ni">apply_async</span><span class="nt">(self, func, callback)</span>
-<span class="g g-Whitespace">    </span><span class="mi">206</span>     <span class="k">def</span> <span class="nf">apply_async</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">func</span><span class="p">,</span> <span class="n">callback</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
-<span class="g g-Whitespace">    </span><span class="mi">207</span>         <span class="sd">&quot;&quot;&quot;Schedule a func to be run&quot;&quot;&quot;</span>
-<span class="ne">--&gt; </span><span class="mi">208</span>         <span class="n">result</span> <span class="o">=</span> <span class="n">ImmediateResult</span><span class="p">(</span><span class="n">func</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">209</span>         <span class="k">if</span> <span class="n">callback</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">210</span>             <span class="n">callback</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
-
-<span class="nn">/usr/local/lib/python3.7/dist-packages/joblib/_parallel_backends.py</span> in <span class="ni">__init__</span><span class="nt">(self, batch)</span>
-<span class="g g-Whitespace">    </span><span class="mi">595</span>         <span class="c1"># Don&#39;t delay the application, to avoid keeping the input</span>
-<span class="g g-Whitespace">    </span><span class="mi">596</span>         <span class="c1"># arguments in memory</span>
-<span class="ne">--&gt; </span><span class="mi">597</span>         <span class="bp">self</span><span class="o">.</span><span class="n">results</span> <span class="o">=</span> <span class="n">batch</span><span class="p">()</span>
-<span class="g g-Whitespace">    </span><span class="mi">598</span> 
-<span class="g g-Whitespace">    </span><span class="mi">599</span>     <span class="k">def</span> <span class="nf">get</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-
-<span class="nn">/usr/local/lib/python3.7/dist-packages/joblib/parallel.py</span> in <span class="ni">__call__</span><span class="nt">(self)</span>
-<span class="g g-Whitespace">    </span><span class="mi">287</span>         <span class="k">with</span> <span class="n">parallel_backend</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_backend</span><span class="p">,</span> <span class="n">n_jobs</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">_n_jobs</span><span class="p">):</span>
-<span class="g g-Whitespace">    </span><span class="mi">288</span>             <span class="k">return</span> <span class="p">[</span><span class="n">func</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
-<span class="ne">--&gt; </span><span class="mi">289</span>                     <span class="k">for</span> <span class="n">func</span><span class="p">,</span> <span class="n">args</span><span class="p">,</span> <span class="n">kwargs</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">items</span><span class="p">]</span>
-<span class="g g-Whitespace">    </span><span class="mi">290</span> 
-<span class="g g-Whitespace">    </span><span class="mi">291</span>     <span class="k">def</span> <span class="nf">__reduce__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-
-<span class="nn">/usr/local/lib/python3.7/dist-packages/joblib/parallel.py</span> in <span class="ni">&lt;listcomp&gt;</span><span class="nt">(.0)</span>
-<span class="g g-Whitespace">    </span><span class="mi">287</span>         <span class="k">with</span> <span class="n">parallel_backend</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_backend</span><span class="p">,</span> <span class="n">n_jobs</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">_n_jobs</span><span class="p">):</span>
-<span class="g g-Whitespace">    </span><span class="mi">288</span>             <span class="k">return</span> <span class="p">[</span><span class="n">func</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
-<span class="ne">--&gt; </span><span class="mi">289</span>                     <span class="k">for</span> <span class="n">func</span><span class="p">,</span> <span class="n">args</span><span class="p">,</span> <span class="n">kwargs</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">items</span><span class="p">]</span>
-<span class="g g-Whitespace">    </span><span class="mi">290</span> 
-<span class="g g-Whitespace">    </span><span class="mi">291</span>     <span class="k">def</span> <span class="nf">__reduce__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-
-<span class="nn">/usr/local/lib/python3.7/dist-packages/sklearn/utils/fixes.py</span> in <span class="ni">__call__</span><span class="nt">(self, *args, **kwargs)</span>
-<span class="g g-Whitespace">    </span><span class="mi">214</span>     <span class="k">def</span> <span class="fm">__call__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
-<span class="g g-Whitespace">    </span><span class="mi">215</span>         <span class="k">with</span> <span class="n">config_context</span><span class="p">(</span><span class="o">**</span><span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="p">):</span>
-<span class="ne">--&gt; </span><span class="mi">216</span>             <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">function</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">217</span> 
-<span class="g g-Whitespace">    </span><span class="mi">218</span> 
-
-<span class="nn">/usr/local/lib/python3.7/dist-packages/sklearn/ensemble/_forest.py</span> in <span class="ni">_parallel_build_trees</span><span class="nt">(tree, forest, X, y, sample_weight, tree_idx, n_trees, verbose, class_weight, n_samples_bootstrap)</span>
-<span class="g g-Whitespace">    </span><span class="mi">183</span>             <span class="n">curr_sample_weight</span> <span class="o">*=</span> <span class="n">compute_sample_weight</span><span class="p">(</span><span class="s2">&quot;balanced&quot;</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">indices</span><span class="o">=</span><span class="n">indices</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">184</span> 
-<span class="ne">--&gt; </span><span class="mi">185</span>         <span class="n">tree</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">sample_weight</span><span class="o">=</span><span class="n">curr_sample_weight</span><span class="p">,</span> <span class="n">check_input</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">186</span>     <span class="k">else</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">187</span>         <span class="n">tree</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">sample_weight</span><span class="o">=</span><span class="n">sample_weight</span><span class="p">,</span> <span class="n">check_input</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
-
-<span class="nn">/usr/local/lib/python3.7/dist-packages/sklearn/tree/_classes.py</span> in <span class="ni">fit</span><span class="nt">(self, X, y, sample_weight, check_input, X_idx_sorted)</span>
-<span class="g g-Whitespace">    </span><span class="mi">940</span>             <span class="n">sample_weight</span><span class="o">=</span><span class="n">sample_weight</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">941</span>             <span class="n">check_input</span><span class="o">=</span><span class="n">check_input</span><span class="p">,</span>
-<span class="ne">--&gt; </span><span class="mi">942</span>             <span class="n">X_idx_sorted</span><span class="o">=</span><span class="n">X_idx_sorted</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">943</span>         <span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">944</span>         <span class="k">return</span> <span class="bp">self</span>
-
-<span class="nn">/usr/local/lib/python3.7/dist-packages/sklearn/tree/_classes.py</span> in <span class="ni">fit</span><span class="nt">(self, X, y, sample_weight, check_input, X_idx_sorted)</span>
-<span class="g g-Whitespace">    </span><span class="mi">246</span>             <span class="n">min_samples_leaf</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">ceil</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">min_samples_leaf</span> <span class="o">*</span> <span class="n">n_samples</span><span class="p">))</span>
-<span class="g g-Whitespace">    </span><span class="mi">247</span> 
-<span class="ne">--&gt; </span><span class="mi">248</span>         <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">min_samples_split</span><span class="p">,</span> <span class="n">numbers</span><span class="o">.</span><span class="n">Integral</span><span class="p">):</span>
-<span class="g g-Whitespace">    </span><span class="mi">249</span>             <span class="k">if</span> <span class="ow">not</span> <span class="mi">2</span> <span class="o">&lt;=</span> <span class="bp">self</span><span class="o">.</span><span class="n">min_samples_split</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">250</span>                 <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
-
-<span class="nn">/usr/lib/python3.7/abc.py</span> in <span class="ni">__instancecheck__</span><span class="nt">(cls, instance)</span>
-<span class="g g-Whitespace">    </span><span class="mi">137</span>         <span class="k">def</span> <span class="fm">__instancecheck__</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">instance</span><span class="p">):</span>
-<span class="g g-Whitespace">    </span><span class="mi">138</span>             <span class="sd">&quot;&quot;&quot;Override for isinstance(instance, cls).&quot;&quot;&quot;</span>
-<span class="ne">--&gt; </span><span class="mi">139</span>             <span class="k">return</span> <span class="n">_abc_instancecheck</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">instance</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">140</span> 
-<span class="g g-Whitespace">    </span><span class="mi">141</span>         <span class="k">def</span> <span class="fm">__subclasscheck__</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">subclass</span><span class="p">):</span>
-
-<span class="nn">/usr/lib/python3.7/abc.py</span> in <span class="ni">__subclasscheck__</span><span class="nt">(cls, subclass)</span>
-<span class="g g-Whitespace">    </span><span class="mi">141</span>         <span class="k">def</span> <span class="fm">__subclasscheck__</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">subclass</span><span class="p">):</span>
-<span class="g g-Whitespace">    </span><span class="mi">142</span>             <span class="sd">&quot;&quot;&quot;Override for issubclass(subclass, cls).&quot;&quot;&quot;</span>
-<span class="ne">--&gt; </span><span class="mi">143</span>             <span class="k">return</span> <span class="n">_abc_subclasscheck</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">subclass</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">144</span> 
-<span class="g g-Whitespace">    </span><span class="mi">145</span>         <span class="k">def</span> <span class="nf">_dump_registry</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">file</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+<span class="nn">/usr/local/lib/python3.7/dist-packages/numpy/core/getlimits.py</span> in <span class="ni">__init__</span><span class="nt">(self, int_type)</span>
+<span class="g g-Whitespace">    </span><span class="mi">517</span>         <span class="k">except</span> <span class="ne">TypeError</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">518</span>             <span class="bp">self</span><span class="o">.</span><span class="n">dtype</span> <span class="o">=</span> <span class="n">numeric</span><span class="o">.</span><span class="n">dtype</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">int_type</span><span class="p">))</span>
+<span class="ne">--&gt; </span><span class="mi">519</span>         <span class="bp">self</span><span class="o">.</span><span class="n">kind</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">dtype</span><span class="o">.</span><span class="n">kind</span>
+<span class="g g-Whitespace">    </span><span class="mi">520</span>         <span class="bp">self</span><span class="o">.</span><span class="n">bits</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">dtype</span><span class="o">.</span><span class="n">itemsize</span> <span class="o">*</span> <span class="mi">8</span>
+<span class="g g-Whitespace">    </span><span class="mi">521</span>         <span class="bp">self</span><span class="o">.</span><span class="n">key</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="si">%s%d</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">kind</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">bits</span><span class="p">)</span>
 
 <span class="ne">KeyboardInterrupt</span>: 
 </pre></div>
@@ -2278,7 +2277,7 @@ acuracy n = 111 = 0.645021645021645
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/200411100025_Tugas 6_25_0.png" src="_images/200411100025_Tugas 6_25_0.png" />
+<img alt="_images/200411100025_Tugas 6_26_0.png" src="_images/200411100025_Tugas 6_26_0.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -2828,7 +2827,7 @@ acuracy n = 499 = 0.6406926406926406
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/200411100025_Tugas 6_28_0.png" src="_images/200411100025_Tugas 6_28_0.png" />
+<img alt="_images/200411100025_Tugas 6_29_0.png" src="_images/200411100025_Tugas 6_29_0.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -2882,7 +2881,7 @@ acuracy n = 499 = 0.6406926406926406
 </div>
 </section>
 <section id="predict">
-<h1>Predict<a class="headerlink" href="#predict" title="Permalink to this headline">#</a></h1>
+<h2>Predict<a class="headerlink" href="#predict" title="Permalink to this headline">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:</span><span class="mi">10</span><span class="p">,:</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
@@ -3249,6 +3248,7 @@ acuracy n = 499 = 0.6406926406926406
   </div>
 </div></div>
 </div>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
